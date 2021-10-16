@@ -1,0 +1,33 @@
+Выдача подборки трендов
+user = хэш пользователя. Поле обязательное.
+Возвращает топ 100 книг по рейтингу, подходящих пользователю по возрасту.
+---
+parameters:
+  - name: data
+    required: true
+    in: body
+    schema:
+      $ref: '#/definitions/Хэш пользователя'
+definitions:
+  Хэш пользователя:
+    type: object
+    properties:
+      user:
+        type: string
+  Выдача книг:
+    type: object
+    properties:
+      user:
+        type: string
+      genre:
+        type: string
+      author:
+        type: string
+      hash:
+        type: string
+      rate:
+        type: double
+
+responses:
+  200:
+   description: Все ок

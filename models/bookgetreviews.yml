@@ -1,0 +1,30 @@
+Отзывы о книге
+---
+parameters:
+  - name: data
+    required: true
+    in: body
+    schema:
+      $ref: '#/definitions/Книга'
+definitions:
+  Книга:
+    type: object
+    properties:
+      hash:
+        type: string
+  Отзыв:
+    type: object
+    properties:
+      rate:
+        type: double
+      text:
+        type: string
+  Отзывы:
+    type: array
+    items:
+      $ref: '#/definitions/Отзыв'
+
+
+responses:
+  200:
+    description: Все ок

@@ -1,0 +1,33 @@
+Регистрация нового пользователя (после получения в /login "New user")
+---
+parameters:
+  - name: data
+    required: true
+    in: body
+    schema:
+      $ref: '#/definitions/Регистрация'
+definitions:
+  Регистрация:
+    type: object
+    properties:
+      email:
+        type: string
+      name:
+        type: string
+      surname:
+        type: string
+      birth:
+        type: string
+        default: "01/01/2000"
+      genres:
+        type: array
+        items:
+          type: string
+      authors:
+        type: array
+        items:
+          type: string
+
+responses:
+  200:
+    description: Все ок

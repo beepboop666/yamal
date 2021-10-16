@@ -1,0 +1,22 @@
+Подтверждение
+---
+parameters:
+  - name: data
+    required: true
+    in: body
+    schema:
+      $ref: '#/definitions/Подтверждение'
+definitions:
+  Подтверждение:
+    type: object
+    properties:
+      email:
+        type: string
+      code:
+        type: integer
+
+responses:
+  200:
+    description: Вход разрешен
+  400:
+    description: Неверный код

@@ -1,0 +1,36 @@
+Подробная информация о книге
+---
+parameters:
+  - name: data
+    required: true
+    in: body
+    schema:
+      $ref: '#/definitions/Книга'
+definitions:
+  Книга:
+    type: object
+    properties:
+      hash:
+        type: string
+  Подбробная книга:
+    type: object
+    properties:
+      user:
+        type: string
+      genre:
+        type: string
+      author:
+        type: string
+      hash:
+        type: string
+      rate:
+        type: double
+      ages:
+        type: integer
+      about:
+        type: string
+
+
+responses:
+  200:
+    description: Все ок
